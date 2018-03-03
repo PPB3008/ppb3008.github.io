@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/kumikohead.jpg"/>
+	 <link rel="shortcut icon" href="/img/kumikohead.jpg">
+	
+			
+    <title>
+    PPB3008's
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">PPB3008</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/PPB3008" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+		                <li><a href="https://twitter.com/AlexDeccsec#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/images/mac.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >mac常见指令和问题解决(持续更新)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>#执行<br>sudo su:在此文件夹上以管理员身份登录root<br>sudo /usr/sbin/apachectl start/stop:apache开始停止<br>/usr/local/mysql/bin/ mysql执行跟目录</p>
+<p>#mac vim文件编辑：<br>如果是vi，则：</p>
+<p>Esc 退出编辑模式，输入以下命令：</p>
+<p>:wq 保存后退出vi，若为 :wq! 则为强制储存后退出（常用）</p>
+<p>:w 保存但不退出（常用）</p>
+<p>:w! 若文件属性为『只读』时，强制写入该档案</p>
+<p>:q 离开 vi （常用）</p>
+<p>:q! 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</p>
+<p>:e! 将档案还原到最原始的状态！</p>
+<p>#添加环境变量：<br>安装后直接在命令行输入mysql会提示mysql: command not found，需要先将其添加到环境变量：</p>
+<p>vim ~/.bash_profile<br>添加以下指令：</p>
+<p>export PATH=${PATH}:/usr/local/mysql/bin<br>保存后立即使其生效：</p>
+<p>source ~/.bash_profile</p>
+<p>#mysql<br>切换数据库  use <em>*</em>;<br>看此库结构： show tables;</p>
+<p>#本地调试wordpress<br>本地配置wordpress中出现链接不上数据库的情况，看下面：<br>如果在浏览器中访问WordPress站点页面时出现数据库连接错误，可以用下面的PHP代码揪出具体原因：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[php] view plain copy</span><br><span class="line">&lt;?php  </span><br><span class="line"><span class="variable">$link</span> = mysql_connect(<span class="string">'localhost'</span>, <span class="string">'root'</span>, <span class="string">''</span>);  </span><br><span class="line"><span class="keyword">if</span> (!<span class="variable">$link</span>) &#123;  </span><br><span class="line">    die(<span class="string">'Could not connect: '</span> . mysql_error());  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="built_in">echo</span> <span class="string">'验证成功'</span>;  </span><br><span class="line">mysql_close(<span class="variable">$link</span>);  </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>比如我遇到的数据库连接错误是因为这个原因：mysql_connect(): No such file or directory。这是因为mysql.sock在我系统上的路径是/tmp/mysql.sock，但 mysql_connect 实际执行的时候需要的却是/var/mysql/mysql.sock。解决办法倒也简单，只要建一个符号链接就行：</p>
+<p>[plain] view plain copy<br>cd /var<br>sudo mkdir mysql<br>sudo chmod 755 mysql<br>cd mysql<br>sudo ln -s /tmp/mysql.sock mysql.sock  </p>
+<p>#sass<br>如果mac上使用gem安装sass失败，可以考虑先安装xcode-select（xcode-select –install）</p>
+<p>#mac上使用ng、webpack等自生成文件时的问题<br>尽量不要用sudo前缀generate文件，会出现文件权限问题（提示非admin权限），需去file info里一个个解锁或通过命令设置跳过权限验证</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://ppb3008.github.io/2018/03/03/mac常见指令和问题解决/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://ppb3008.github.io/2018/03/03/mac常见指令和问题解决/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
